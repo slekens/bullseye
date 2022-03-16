@@ -1,2 +1,2 @@
 # bullseye
-SwuiftUI Tutorial Ray Wenderlich
+SwiftUI Tutorial Ray Wenderlich
