@@ -73,10 +73,13 @@ struct HitMeButton: View {
                 .strokeBorder(Color.white, lineWidth: 2.0)
         }
         .alert("Hello there!", isPresented: $alertIsVisible) {
-            Button("Awesome!") {}
+            Button("Awesome!") {
+                game.startNewRound(points: game.points(sliderValue: Int(sliderValue)))
+            }
         } message: {
             let roundedValue = Int(sliderValue.rounded())
-            Text("The slider's value is \(roundedValue).\n" + "You scored \(game.points(sliderValue: roundedValue)) points this round.")
+            let points = game.points(sliderValue: roundedValue)
+            Text("The slider's value is \(roundedValue).\n" + "You scored \(points) points this round.")
         }
     }
 }
