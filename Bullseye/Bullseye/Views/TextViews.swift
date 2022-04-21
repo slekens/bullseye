@@ -10,7 +10,7 @@ import SwiftUI
 struct InstructionText: View {
     var text: String
     var body: some View {
-        Text(text)
+        Text(text.uppercased())
             .bold()
             .kerning(2.0)
             .multilineTextAlignment(.center)
@@ -42,7 +42,7 @@ struct SliderLabelText: View {
     }
 }
 
-struct LabelTextView: View {
+struct LabelText: View {
     var text: String
     var body: some View {
         Text(text.uppercased())
@@ -53,7 +53,31 @@ struct LabelTextView: View {
     }
 }
 
-struct LabelContentTextView: View {
+struct BodyText: View {
+    var text: String
+    var body: some View {
+        Text(text)
+            .font(.subheadline)
+            .fontWeight(.semibold)
+            .multilineTextAlignment(.center)
+            .lineSpacing(12.0)
+    }
+}
+
+struct ButtonText: View {
+    var text: String
+    var body: some View {
+        Text(text)
+            .bold()
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(Color.accentColor)
+            .foregroundColor(.white)
+            .cornerRadius(12.0)
+    }
+}
+
+struct LabelContentText: View {
     var text: String
     var body: some View {
         Text(text.uppercased())
@@ -70,8 +94,11 @@ struct TextViews_Previews: PreviewProvider {
             InstructionText(text: "Instructions")
             BigNumberText(text: "100")
             SliderLabelText(text: "1")
-            LabelTextView(text: "Score")
-            LabelContentTextView(text: "999")
+            LabelText(text: "Score")
+            LabelContentText(text: "999")
+            BodyText(text: "You scored 200 points \n 🎉🎉🎉")
+            ButtonText(text: "Start New Round")
         }
+        .padding()
     }
 }

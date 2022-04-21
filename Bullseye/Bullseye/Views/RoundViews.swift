@@ -40,8 +40,8 @@ struct RoundRectTextView: View {
     var text: String
     var body: some View {
         VStack {
-            LabelTextView(text: title.uppercased())
-            LabelContentTextView(text: String(text))
+            LabelText(text: title.uppercased())
+            LabelContentText(text: String(text))
                 .frame(width: 68.0, height: 56.0)
                 .overlay(
                     RoundedRectangle(cornerRadius: 21.0)
