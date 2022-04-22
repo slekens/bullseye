@@ -13,10 +13,10 @@ struct RoundedImageViewStroked: View {
         Image(systemName: systemName)
             .font(.title)
             .foregroundColor(Color("TextColor"))
-            .frame(width: 56.0, height: 56.0)
+            .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
             .overlay (
                 Circle()
-                    .strokeBorder(Color("Border"), lineWidth: 2.0)
+                    .strokeBorder(Color("Border"), lineWidth: Constants.General.strokeWidth)
             )
     }
 }
@@ -27,7 +27,7 @@ struct RoundedImageViewFilled: View {
         Image(systemName: systemName)
             .font(.title)
             .foregroundColor(Color("ButtonFilledText"))
-            .frame(width: 56.0, height: 56.0)
+            .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
             .background(
                 Circle()
                     .fill(Color("ButtonFilledBackground"))
@@ -42,12 +42,26 @@ struct RoundRectTextView: View {
         VStack {
             LabelText(text: title.uppercased())
             LabelContentText(text: String(text))
-                .frame(width: 68.0, height: 56.0)
+                .frame(width: Constants.General.roundRectViewWidth, height: Constants.General.roundRectViewHeight)
                 .overlay(
-                    RoundedRectangle(cornerRadius: 21.0)
-                        .strokeBorder(Color("Border"), lineWidth: 2.0)
+                    RoundedRectangle(cornerRadius: Constants.General.roundRectCornerRadius)
+                        .strokeBorder(Color("Border"), lineWidth: Constants.General.strokeWidth)
                 )
         }
+    }
+}
+
+struct RoundedTextView: View {
+    var text: String
+    var body: some View {
+        Text(text)
+            .font(.title)
+            .foregroundColor(Color("TextColor"))
+            .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
+            .overlay (
+                Circle()
+                    .strokeBorder(Color("LeaderboardRowColor"), lineWidth: Constants.General.strokeWidth)
+            )
     }
 }
 
@@ -58,6 +72,7 @@ struct PreviewView: View {
             RoundedImageViewFilled(systemName: "list.dash")
             RoundRectTextView(title: "Score", text: "999")
             RoundRectTextView(title: "Round", text: "1")
+            RoundedTextView(text: "1")
         }
     }
 }

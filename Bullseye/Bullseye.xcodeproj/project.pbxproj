@@ -17,7 +17,8 @@
 		2EF7477D27DFDC61003D1CDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EF7477C27DFDC61003D1CDD /* Assets.xcassets */; };
 		2EF7478027DFDC61003D1CDD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EF7477F27DFDC61003D1CDD /* Preview Assets.xcassets */; };
 		B884C05B2810DCF4006DB03D /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B884C05A2810DCF4006DB03D /* PointsView.swift */; };
-		B884C05D2810E7F8006DB03D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B884C05C2810E7F8006DB03D /* Models.swift */; };
+		B884C05D2810E7F8006DB03D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B884C05C2810E7F8006DB03D /* Constants.swift */; };
+		B8CF166828121FA3003079A3 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CF166728121FA3003079A3 /* LeaderboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,8 @@
 		2EF7477C27DFDC61003D1CDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2EF7477F27DFDC61003D1CDD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B884C05A2810DCF4006DB03D /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
-		B884C05C2810E7F8006DB03D /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B884C05C2810E7F8006DB03D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B8CF166728121FA3003079A3 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				2E5C4D5527E0EA8300D8A115 /* Game.swift */,
-				B884C05C2810E7F8006DB03D /* Models.swift */,
+				B884C05C2810E7F8006DB03D /* Constants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -81,6 +83,7 @@
 				2E5C4D6C27E14E0400D8A115 /* RoundViews.swift */,
 				2E5C4D6E27E1552600D8A115 /* BackgroundView.swift */,
 				B884C05A2810DCF4006DB03D /* PointsView.swift */,
+				B8CF166728121FA3003079A3 /* LeaderboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,7 +253,8 @@
 				2E5C4D6F27E1552600D8A115 /* BackgroundView.swift in Sources */,
 				2E5C4D6D27E14E0400D8A115 /* RoundViews.swift in Sources */,
 				2EF7477B27DFDC60003D1CDD /* ContentView.swift in Sources */,
-				B884C05D2810E7F8006DB03D /* Models.swift in Sources */,
+				B884C05D2810E7F8006DB03D /* Constants.swift in Sources */,
+				B8CF166828121FA3003079A3 /* LeaderboardView.swift in Sources */,
 				2E5C4D6527E1415700D8A115 /* TextViews.swift in Sources */,
 				B884C05B2810DCF4006DB03D /* PointsView.swift in Sources */,
 				2E5C4D5627E0EA8300D8A115 /* Game.swift in Sources */,
